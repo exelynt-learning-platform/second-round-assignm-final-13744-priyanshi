@@ -29,7 +29,7 @@ const chatSlice = createSlice({
             .addCase(sendMessage.fulfilled, (state, action) => {
                 state.loading = false;
                 state.messages.push({ role: "ai", content: action.payload });
-                state.messages.push({ role: "ai", content: "Please Call on +1-800-123-4567", });
+                
             })
             .addCase(sendMessage.rejected, (state) => {
                 state.loading = false;
